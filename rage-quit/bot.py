@@ -15,7 +15,7 @@ message_handler = MessageHandler(Filters.status_update,
 
 updater = Updater(TOKEN)
 updater.dispatcher.add_error_handler(error_callback)
-updater.dispatcher.add_handler(handler)
+updater.dispatcher.add_handler(message_handler)
 
 updater.start_polling()
 updater.idle()
