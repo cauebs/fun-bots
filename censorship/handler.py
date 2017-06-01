@@ -19,7 +19,7 @@ def callback(bot, update):
 def censor(bot, update):
     message = update.message
     chat_id = message.chat_id
-    username = '@' + message.from_user.username
+    username = message.from_user.first_name
 
     bot.delete_message(chat_id, message.message_id)
     bot.send_message(chat_id, WARNING.format(username))
